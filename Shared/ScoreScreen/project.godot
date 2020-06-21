@@ -8,14 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "VBoxContainer",
+"class": "ParameterBox",
+"language": "GDScript",
+"path": "res://ParameterBox.gd"
+} ]
 _global_script_class_icons={
-
+"ParameterBox": ""
 }
 
 [application]
 
-config/name="TestSharedProject"
+config/name="ScoreScreen"
+run/main_scene="res://ScoreScreen.tscn"
 config/icon="res://icon.png"
 
 [rendering]
