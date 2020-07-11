@@ -23,7 +23,7 @@ export var kicksPoints:int = 0 #how many points awarded per kick
 
 export var ninjaFlips:int = 0 #number of successful ninja flips
 export var ninjaFlipsTime:float = 0 #how much time it should take to increment ninjaFlips
-export var ninjaFlipsMult:float = 0.0 #score multiplier per ninja flip
+export var ninjaFlipsMult:float = 0 #score multiplier per ninja flip
 
 export var shacklesOfFate:bool = false #are the shackles of fate cast off?
 export var shacklesOfFateTime:float = 0.0
