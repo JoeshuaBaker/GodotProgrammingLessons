@@ -85,7 +85,7 @@ tracks/4/keys = {
 script = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 957.264, -106.561 )
+position = Vector2( 86, 283 )
 scale = Vector2( 0.0448451, 0.0448487 )
 frames = SubResource( 1 )
 
