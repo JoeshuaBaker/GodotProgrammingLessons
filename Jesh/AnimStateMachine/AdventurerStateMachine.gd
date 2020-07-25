@@ -24,8 +24,7 @@ extends AnimationPlayer
 enum states {
 	Idle,
 	Walk,
-	Attack,
-	Jump
+	Attack
 }
 
 var currentState:int = -1
@@ -43,7 +42,6 @@ func _ready():
 # Called every frame
 func _process(delta):
 	processState()
-	print(speed)
 	
 func transition(nextState:int):
 	#transition to idle state
@@ -60,10 +58,6 @@ func transition(nextState:int):
 	elif nextState == states.Attack:
 		play("Attack Straight")
 		speed = 0
-	
-	elif nextState == states.Jump:
-		play("Jump")
-		speed = jumpSpeed
 	
 	currentState = nextState
 
@@ -85,8 +79,6 @@ func processState():
 		#If attack key is pressed, transition to attacking state
 		elif checkAttackInput():
 			transition(states.Attack)
-		elif checkJumpInput():
-			transition(states.Jump)
 		#Otherwise, update the sprite's position by direction * speed
 		else:
 			sprite.position += direction * speed
@@ -96,12 +88,6 @@ func processState():
 		#If attack animation is done playing, transition to idle
 		if not is_playing():
 			transition(states.Idle)
-	
-	if currentState == states.Jump:
-		if not is_playing():
-			transition(states.Idle)
-		else:
-			sprite.position += direction * speed
 
 
 #Utility functions to process input. You shouldn't have to modify these at all.
