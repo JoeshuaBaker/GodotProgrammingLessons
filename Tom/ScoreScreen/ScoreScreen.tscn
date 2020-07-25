@@ -1,0 +1,308 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://RetroLabel.tres" type="DynamicFont" id=1]
+[ext_resource path="res://PixelFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://RetroHeader.tres" type="DynamicFont" id=3]
+[ext_resource path="res://ScoreScreen.gd" type="Script" id=4]
+[ext_resource path="res://ParameterBox.gd" type="Script" id=5]
+[ext_resource path="res://test.gd" type="Script" id=6]
+
+[node name="MarginContainer" type="MarginContainer"]
+margin_left = 200.0
+margin_top = 50.0
+margin_right = 825.0
+margin_bottom = 550.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParameterBox" type="VBoxContainer" parent="."]
+margin_right = 625.0
+margin_bottom = 520.0
+script = ExtResource( 5 )
+timeBetweenScores = 0.5
+time = 20.0
+timeTime = 1.0
+timePoints = 5
+punches = 18
+punchesTime = 1.0
+punchesPoints = 6
+kicks = 24
+kicksTime = 1.0
+kicksPoints = 8
+ninjaFlips = 4
+ninjaFlipsTime = 1.0
+ninjaFlipsMult = 2.0
+shacklesOfFate = true
+shacklesOfFateTime = 0.5
+shacklesOfFateMult = 2.0
+accuracy = Vector2( 18, 6 )
+accuracyTime = 2.0
+hitsPoints = 200
+missesPoints = 75
+ninjaThreshold = 5000
+ninjaMasterThreshold = 10000
+senseiThreshold = 25000
+
+[node name="Score" type="CenterContainer" parent="ParameterBox"]
+margin_right = 625.0
+margin_bottom = 51.0
+
+[node name="ScoreLabel" type="Label" parent="ParameterBox/Score"]
+margin_left = 233.0
+margin_right = 392.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.270588, 0.647059, 0.803922, 1 )
+text = "Score: "
+
+[node name="TimeRemaining" type="HBoxContainer" parent="ParameterBox"]
+margin_top = 55.0
+margin_right = 625.0
+margin_bottom = 93.0
+
+[node name="Name" type="CenterContainer" parent="ParameterBox/TimeRemaining"]
+margin_right = 266.0
+margin_bottom = 38.0
+
+[node name="Label" type="Label" parent="ParameterBox/TimeRemaining/Name"]
+margin_top = 1.0
+margin_right = 266.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 1 )
+text = "Time Remaining: "
+
+[node name="Value" type="CenterContainer" parent="ParameterBox/TimeRemaining"]
+margin_left = 270.0
+margin_right = 300.0
+margin_bottom = 38.0
+size_flags_horizontal = 0
+
+[node name="TimeLabel" type="Label" parent="ParameterBox/TimeRemaining/Value"]
+margin_right = 30.0
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+
+[node name="Space3" type="Label" parent="ParameterBox"]
+margin_top = 97.0
+margin_right = 625.0
+margin_bottom = 133.0
+custom_fonts/font = ExtResource( 1 )
+text = " "
+
+[node name="Punches" type="HBoxContainer" parent="ParameterBox"]
+margin_top = 137.0
+margin_right = 625.0
+margin_bottom = 175.0
+
+[node name="Name" type="CenterContainer" parent="ParameterBox/Punches"]
+margin_right = 149.0
+margin_bottom = 38.0
+
+[node name="Label" type="Label" parent="ParameterBox/Punches/Name"]
+margin_top = 1.0
+margin_right = 149.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 1 )
+text = "punches: "
+
+[node name="Value" type="CenterContainer" parent="ParameterBox/Punches"]
+margin_left = 153.0
+margin_right = 183.0
+margin_bottom = 38.0
+size_flags_horizontal = 0
+
+[node name="PunchesLabel" type="Label" parent="ParameterBox/Punches/Value"]
+margin_right = 30.0
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+
+[node name="Kicks" type="HBoxContainer" parent="ParameterBox"]
+margin_top = 179.0
+margin_right = 625.0
+margin_bottom = 217.0
+
+[node name="Name" type="CenterContainer" parent="ParameterBox/Kicks"]
+margin_right = 98.0
+margin_bottom = 38.0
+
+[node name="Label" type="Label" parent="ParameterBox/Kicks/Name"]
+margin_top = 1.0
+margin_right = 98.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 1 )
+text = "KICKS: "
+
+[node name="Value" type="CenterContainer" parent="ParameterBox/Kicks"]
+margin_left = 102.0
+margin_right = 132.0
+margin_bottom = 38.0
+size_flags_horizontal = 0
+
+[node name="KicksLabel" type="Label" parent="ParameterBox/Kicks/Value"]
+margin_right = 30.0
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+
+[node name="Ninja Flips" type="HBoxContainer" parent="ParameterBox"]
+margin_top = 221.0
+margin_right = 625.0
+margin_bottom = 259.0
+
+[node name="Name" type="CenterContainer" parent="ParameterBox/Ninja Flips"]
+margin_right = 183.0
+margin_bottom = 38.0
+
+[node name="Label" type="Label" parent="ParameterBox/Ninja Flips/Name"]
+margin_top = 1.0
+margin_right = 183.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 1 )
+text = "NINJA FLIPS: "
+
+[node name="Value" type="CenterContainer" parent="ParameterBox/Ninja Flips"]
+margin_left = 187.0
+margin_right = 217.0
+margin_bottom = 38.0
+size_flags_horizontal = 0
+
+[node name="FlipsLabel" type="Label" parent="ParameterBox/Ninja Flips/Value"]
+margin_right = 30.0
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+
+[node name="Space" type="Label" parent="ParameterBox"]
+margin_top = 263.0
+margin_right = 625.0
+margin_bottom = 299.0
+custom_fonts/font = ExtResource( 1 )
+text = " "
+
+[node name="Shackles Of Fate" type="HBoxContainer" parent="ParameterBox"]
+margin_top = 303.0
+margin_right = 625.0
+margin_bottom = 341.0
+
+[node name="Name" type="CenterContainer" parent="ParameterBox/Shackles Of Fate"]
+margin_right = 287.0
+margin_bottom = 38.0
+
+[node name="Label" type="Label" parent="ParameterBox/Shackles Of Fate/Name"]
+margin_top = 1.0
+margin_right = 287.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 1 )
+text = "Shackles Of fate:"
+
+[node name="Value" type="CenterContainer" parent="ParameterBox/Shackles Of Fate"]
+margin_left = 291.0
+margin_right = 291.0
+margin_bottom = 38.0
+size_flags_horizontal = 0
+
+[node name="FateLabel" type="Label" parent="ParameterBox/Shackles Of Fate/Value"]
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 1, 0.0627451, 1 )
+
+[node name="Shuriken Accuracy" type="HBoxContainer" parent="ParameterBox"]
+margin_top = 345.0
+margin_right = 625.0
+margin_bottom = 383.0
+
+[node name="Name" type="CenterContainer" parent="ParameterBox/Shuriken Accuracy"]
+margin_right = 80.0
+margin_bottom = 38.0
+
+[node name="Label" type="Label" parent="ParameterBox/Shuriken Accuracy/Name"]
+margin_top = 1.0
+margin_right = 80.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.176471, 1, 0, 1 )
+text = "Hits: "
+
+[node name="Value" type="CenterContainer" parent="ParameterBox/Shuriken Accuracy"]
+margin_left = 84.0
+margin_right = 114.0
+margin_bottom = 38.0
+size_flags_horizontal = 0
+
+[node name="HitsLabel" type="Label" parent="ParameterBox/Shuriken Accuracy/Value"]
+margin_right = 30.0
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
+
+[node name="Name2" type="CenterContainer" parent="ParameterBox/Shuriken Accuracy"]
+margin_left = 118.0
+margin_right = 249.0
+margin_bottom = 38.0
+
+[node name="Label" type="Label" parent="ParameterBox/Shuriken Accuracy/Name2"]
+margin_top = 1.0
+margin_right = 131.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = " Misses: "
+
+[node name="Value2" type="CenterContainer" parent="ParameterBox/Shuriken Accuracy"]
+margin_left = 253.0
+margin_right = 283.0
+margin_bottom = 38.0
+size_flags_horizontal = 0
+
+[node name="MissesLabel" type="Label" parent="ParameterBox/Shuriken Accuracy/Value2"]
+margin_right = 30.0
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
+
+[node name="Space2" type="Label" parent="ParameterBox"]
+margin_top = 387.0
+margin_right = 625.0
+margin_bottom = 423.0
+custom_fonts/font = ExtResource( 1 )
+text = " "
+
+[node name="Rank Achieved" type="CenterContainer" parent="ParameterBox"]
+margin_top = 427.0
+margin_right = 625.0
+margin_bottom = 520.0
+
+[node name="Rank Achieved" type="VBoxContainer" parent="ParameterBox/Rank Achieved"]
+margin_left = 144.0
+margin_right = 480.0
+margin_bottom = 93.0
+
+[node name="Name" type="CenterContainer" parent="ParameterBox/Rank Achieved/Rank Achieved"]
+margin_right = 336.0
+margin_bottom = 51.0
+
+[node name="Label" type="Label" parent="ParameterBox/Rank Achieved/Rank Achieved/Name"]
+margin_right = 336.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.168627, 0.6, 0.764706, 1 )
+text = "RANK ACHIEVED:"
+
+[node name="Value" type="CenterContainer" parent="ParameterBox/Rank Achieved/Rank Achieved"]
+margin_top = 55.0
+margin_bottom = 93.0
+size_flags_horizontal = 0
+
+[node name="RankLabel" type="Label" parent="ParameterBox/Rank Achieved/Rank Achieved/Value"]
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+
+[node name="test" type="Node2D" parent="."]
+script = ExtResource( 6 )
