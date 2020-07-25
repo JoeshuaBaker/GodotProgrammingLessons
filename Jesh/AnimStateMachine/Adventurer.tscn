@@ -48,7 +48,7 @@ tracks/0/keys = {
 "values": [ 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=7]
 resource_name = "Die"
 length = 0.7
 tracks/0/type = "value"
@@ -64,7 +64,7 @@ tracks/0/keys = {
 "values": [ 91, 92, 93, 94, 95, 96, 97 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=8]
 resource_name = "GetHit"
 length = 0.4
 tracks/0/type = "value"
@@ -80,7 +80,8 @@ tracks/0/keys = {
 "values": [ 78, 79, 80, 81 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=4]
+resource_name = "Idle"
 length = 1.3
 loop = true
 tracks/0/type = "value"
@@ -96,7 +97,8 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=5]
+resource_name = "Jump"
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -111,7 +113,8 @@ tracks/0/keys = {
 "values": [ 65, 66, 67, 68, 69, 70 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=6]
+resource_name = "Walk"
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -133,11 +136,11 @@ tracks/0/keys = {
 "anims/Attack Down" = SubResource( 1 )
 "anims/Attack Straight" = SubResource( 2 )
 "anims/Attack Up" = SubResource( 3 )
-anims/Die = SubResource( 4 )
-anims/GetHit = SubResource( 5 )
-anims/Idle = SubResource( 6 )
-anims/Jump = SubResource( 7 )
-anims/Walk = SubResource( 8 )
+anims/Die = SubResource( 7 )
+anims/GetHit = SubResource( 8 )
+anims/Idle = SubResource( 4 )
+anims/Jump = SubResource( 5 )
+anims/Walk = SubResource( 6 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -146,4 +149,4 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 1 )
 vframes = 8
 hframes = 13
-frame = 91
+frame = 48
