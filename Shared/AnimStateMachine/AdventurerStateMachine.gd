@@ -43,7 +43,6 @@ func _ready():
 # Called every frame
 func _process(delta):
 	processState()
-	print(speed)
 	
 func transition(nextState:int):
 	#transition to idle state
@@ -53,7 +52,7 @@ func transition(nextState:int):
 	
 	#transition to walking state
 	elif nextState == states.Walk:
-		play("Walk")
+		play("Walk", -1, 2.5, true)
 		speed = maxSpeed
 	
 	#transition to attacking state

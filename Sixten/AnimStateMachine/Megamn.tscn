@@ -66,7 +66,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=13]
 resource_name = "Duck"
 loop = true
 tracks/0/type = "value"
@@ -82,8 +82,7 @@ tracks/0/keys = {
 "values": [ 3 ]
 }
 
-[sub_resource type="Animation" id=13]
-resource_name = "Idle"
+[sub_resource type="Animation" id=14]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:frame")
@@ -98,8 +97,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=14]
-resource_name = "Walk"
+[sub_resource type="Animation" id=15]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -124,7 +122,7 @@ frames = SubResource( 12 )
 frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Duck = SubResource( 15 )
-anims/Idle = SubResource( 13 )
-anims/Walk = SubResource( 14 )
+anims/Duck = SubResource( 13 )
+anims/Idle = SubResource( 14 )
+anims/Walk = SubResource( 15 )
 script = ExtResource( 2 )
