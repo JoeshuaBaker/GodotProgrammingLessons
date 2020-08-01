@@ -1,16 +1,24 @@
 extends Sprite
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
+func _process(delta):
+	if Input.is_action_just_pressed("ui_up"):
+		if myScaleFunction(2, 8):
+			print("I successfully scaled up")
+		else:
+			print("I could not scale up any further...")
+	if Input.is_action_just_pressed("ui_down"):
+		myScaleFunction(.5, 1000000)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+#scale the sprite when the enter key is pressed.
+func myScaleFunction(scaleFactor:float, scaleMax:float) -> bool:
+	if scale.x > scaleMax and scale.y > scaleMax:
+		return false
+	else:
+		scale *= scaleFactor
+		return true

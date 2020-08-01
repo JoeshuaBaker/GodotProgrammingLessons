@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://EnemySpawner.gd" type="Script" id=1]
+[ext_resource path="res://thing.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "thing"
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/thing = SubResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource( 1 )
