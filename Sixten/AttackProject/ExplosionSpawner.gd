@@ -46,14 +46,26 @@ func Attack5(dir:int):
 	
 func Attack6(dir:int):
 	
-	print ("man this some bullshit i'll never become hokage")
+	print ("wheeee")
 	
-	for i in range(1,10):
+	var delay:float = 0
+	for eye in range (0,8):
+		for i in range(-1-eye,1+1+eye):
+			delay += 0.01
+			SetDelayedExplosion(Vector2(i,-1-eye), delay)
 		
-		for guy in range(-1*i, i):
-			SetDelayedExplosion(Vector2(-1*guy+i, guy+i), 0.1*abs(i+abs(guy)))
-		for bye in range(-1*i, i):
-			SetDelayedExplosion(Vector2(bye-i, bye+i), 0.1*abs(i+abs(bye)))
+		for i in range(-1-eye,1+1+eye):
+			delay += 0.01
+			SetDelayedExplosion(Vector2(1+eye,i), delay)
+		
+		for i in range(-1-eye,1+1+eye):
+			delay += 0.01
+			SetDelayedExplosion(Vector2(-i,1+eye), delay)
+		
+		for i in range(-1-eye,1+1+eye):
+			delay += 0.01
+			SetDelayedExplosion(Vector2(-1-eye,-i), delay)
+
 	pass
 
 
