@@ -9,7 +9,6 @@ var explosionQueue = []
 
 #dir is -1 if facing left, 1 if facing right
 func Attack1(dir:int):
-	
 	for i in range(-5, 6):
 		SetDelayedExplosion(Vector2(2*dir, i), 0.1*abs(i))
 	pass
@@ -18,12 +17,34 @@ func Attack2(dir:int):
 	pass
 	
 func Attack3(dir:int):
+	for i in range(-2, 3):
+		SetDelayedExplosion(Vector2(dir, i), 0)
+	for i in range(-1, 2):
+		SetDelayedExplosion(Vector2(2*dir, i), 0.1)
+	SetDelayedExplosion(Vector2(3*dir,0), 0.2)
 	pass
 	
 func Attack4(dir:int):
 	pass
 	
 func Attack5(dir:int):
+	var delay:float = 0
+	#Top Loop
+	for i in range (-1, 1+1):
+		delay += 0.01
+		SetDelayedExplosion(Vector2(i, -1), delay)
+	#Right Loop
+	for i in range (-1+1, 1+1):
+		delay += 0.01
+		SetDelayedExplosion(Vector2(1, i), delay)
+	#Bottom Loop
+	for i in range (-1+1, 1+1):
+		delay += 0.01
+		SetDelayedExplosion(Vector2(-i, 1), delay)
+	#Left Loop
+	for i in range (-1+1, 1+1):
+		delay += 0.01
+		SetDelayedExplosion(Vector2(-1, -i), delay)
 	pass
 
 

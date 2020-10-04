@@ -1,0 +1,154 @@
+[gd_resource type="SpriteFrames" load_steps=70 format=2]
+
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/stinger6.png" type="Texture" id=1]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/airslash_0.png" type="Texture" id=2]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/stinger4.png" type="Texture" id=3]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/stinger5.png" type="Texture" id=4]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/idle_0.png" type="Texture" id=5]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack1_3.png" type="Texture" id=6]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack1_6.png" type="Texture" id=7]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack2_2.png" type="Texture" id=8]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack3_0.png" type="Texture" id=9]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/flip2.png" type="Texture" id=10]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack2_1.png" type="Texture" id=11]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/flip3.png" type="Texture" id=12]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/flip4.png" type="Texture" id=13]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack3_2.png" type="Texture" id=14]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/flip6.png" type="Texture" id=15]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack2_3.png" type="Texture" id=16]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack3_3.png" type="Texture" id=17]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/flip5.png" type="Texture" id=18]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/flip7.png" type="Texture" id=19]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack3_7.png" type="Texture" id=20]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/flip8.png" type="Texture" id=21]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/idle_1 (1).png" type="Texture" id=22]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/idle_2 (1).png" type="Texture" id=23]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack2_0.png" type="Texture" id=24]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack2_4.png" type="Texture" id=25]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack3_4.png" type="Texture" id=26]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack3_6.png" type="Texture" id=27]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/flip1.png" type="Texture" id=28]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack1_0.png" type="Texture" id=29]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack1_4.png" type="Texture" id=30]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack3_1.png" type="Texture" id=31]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack1_1.png" type="Texture" id=32]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack1_5.png" type="Texture" id=33]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack3_5.png" type="Texture" id=34]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/attack1_2.png" type="Texture" id=35]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/stinger2.png" type="Texture" id=36]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/stinger3.png" type="Texture" id=37]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/push_1.png" type="Texture" id=38]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/run2_0.png" type="Texture" id=39]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/pinwheel1.png" type="Texture" id=40]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/pinwheel2.png" type="Texture" id=41]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/pinwheel3.png" type="Texture" id=42]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/run2_1.png" type="Texture" id=43]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/push_0.png" type="Texture" id=44]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/run2_2.png" type="Texture" id=45]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/stinger1.png" type="Texture" id=46]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/pinwheel4.png" type="Texture" id=47]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/run2_3.png" type="Texture" id=48]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/stinger9.png" type="Texture" id=49]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/slamdunk4.png" type="Texture" id=50]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/slamdunk5.png" type="Texture" id=51]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/dash.png" type="Texture" id=52]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/airslash_1.png" type="Texture" id=53]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/slamdunk7.png" type="Texture" id=54]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/stinger10.png" type="Texture" id=55]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/stinger7.png" type="Texture" id=56]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/slamdunk2.png" type="Texture" id=57]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/slamdunk1.png" type="Texture" id=58]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/slamdunk0.png" type="Texture" id=59]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/slamdunk6.png" type="Texture" id=60]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/stinger8.png" type="Texture" id=61]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/wall_0.png" type="Texture" id=62]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/wall_1.png" type="Texture" id=63]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/airslash_2.png" type="Texture" id=64]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/slamdunk3.png" type="Texture" id=65]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/kick1.png" type="Texture" id=66]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/kick2.png" type="Texture" id=67]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/fall_0.png" type="Texture" id=68]
+[ext_resource path="res://New Azumi Game Sprites/Azumi sprites/fall_1.png" type="Texture" id=69]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 46 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 56 ), ExtResource( 61 ), ExtResource( 49 ), ExtResource( 55 ) ],
+"loop": false,
+"name": "Stinger",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 25 ) ],
+"loop": false,
+"name": "Attack2",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 43 ), ExtResource( 45 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "Run2",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 52 ) ],
+"loop": true,
+"name": "Dash",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 66 ), ExtResource( 67 ) ],
+"loop": true,
+"name": "Kick",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 62 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "WallCling",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 65 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 60 ), ExtResource( 54 ) ],
+"loop": false,
+"name": "Slam",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 31 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 26 ), ExtResource( 34 ), ExtResource( 27 ), ExtResource( 20 ) ],
+"loop": false,
+"name": "Attack3",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 29 ), ExtResource( 35 ), ExtResource( 6 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "Attack1",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 43 ) ],
+"loop": true,
+"name": "Run",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 44 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "Push",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 47 ) ],
+"loop": true,
+"name": "Pinwheel",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 64 ), ExtResource( 53 ) ],
+"loop": false,
+"name": "AirAttack",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 68 ), ExtResource( 69 ) ],
+"loop": true,
+"name": "Fall",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 21 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 12.0
+} ]

@@ -28,6 +28,7 @@ enum states {
 	Jump
 }
 
+export var array = []
 var currentState:int = -1
 var direction:Vector2 = Vector2(0,0)
 var speed:int = 0
