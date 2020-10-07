@@ -37,3 +37,9 @@ enum Type {
 	Stinger,
 	WallCling
 }
+
+static func strToEnum(var animName : String) -> int:
+	return Type.get(animName)
+
+static func enumToStr(var animValue : int) -> String:
+	return Type.keys()[animValue]

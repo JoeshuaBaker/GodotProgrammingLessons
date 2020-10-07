@@ -9,16 +9,17 @@ var stateMachine : AzumiStateMachine
 func enter(_lastState : AzumiState):
 	pass
 
-func update(_delta):
+func update(delta):
+	checkTransition(delta)
 	pass
 
-func exit(_nextState : AzumiState):
+#if cancel is true, this state was cancelled early
+func exit(_nextState : AzumiState, var _cancel : bool = false):
 	pass
-
-#alt exit for cancelling into another state; defaults to passthrough for exit
-func cancel(nextState : AzumiState):
-	exit(nextState)
 
 #called when animationplayer finishes and needs a new state to transition to
 func end():
 	stateMachine.transition(AzumiAnim.Idle)
+	
+func checkTransition(_delta) -> bool:
+	return false

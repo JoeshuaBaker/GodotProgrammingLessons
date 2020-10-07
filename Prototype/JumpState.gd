@@ -20,14 +20,13 @@ func update(delta):
 	velocity -= azumi.gravity*delta
 	if velocity <= 0:
 		end()
-	if azumi.translation.y <= 0:
-		stateMachine.transition(AzumiAnim.Idle)
+	checkTransition(delta)
 
-func exit(nextState : AzumiState):
+#if cancel is true, this state was cancelled early
+func exit(_nextState : AzumiState, var _cancel : bool = false):
 	azumi.translation.y = 0
 	velocity = 0
 	retainMovement = Vector2.ZERO
-	pass
 	
 #alt exit for cancelling into another state; defaults to passthrough for exit
 func cancel(nextState : AzumiState):
@@ -36,3 +35,8 @@ func cancel(nextState : AzumiState):
 #called when animationplayer finishes and needs a new state to transition to
 func end():
 	stateMachine.play(AzumiAnim.Fall)
+	
+func checkTransition(_delta) -> bool:
+	if azumi.translation.y <= 0:
+		return stateMachine.transition(AzumiAnim.Idle)
+	return false
