@@ -11,7 +11,7 @@
 [ext_resource path="res://IdleState.gd" type="Script" id=9]
 [ext_resource path="res://AzumiHitbox.gd" type="Script" id=10]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "AirAttack"
 length = 0.25
 step = 0.0833333
@@ -40,7 +40,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 2 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 length = 0.291667
 step = 0.0416667
 tracks/0/type = "value"
@@ -128,7 +128,7 @@ tracks/6/keys = {
 "values": [ Vector3( 0.35, 0.3, 0 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 length = 0.208334
 step = 0.0416667
 tracks/0/type = "value"
@@ -216,7 +216,7 @@ tracks/6/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 length = 0.333333
 step = 0.0416667
 tracks/0/type = "value"
@@ -292,7 +292,7 @@ tracks/5/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 step = 1.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite3D:animation")
@@ -319,7 +319,7 @@ tracks/1/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 length = 0.166667
 step = 0.0833333
 tracks/0/type = "value"
@@ -347,7 +347,7 @@ tracks/1/keys = {
 "values": [ 0, 1 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=7]
 loop = true
 step = 0.25
 tracks/0/type = "value"
@@ -387,7 +387,7 @@ tracks/2/keys = {
 "values": [ [  ] ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=8]
 length = 0.666667
 step = 0.0833333
 tracks/0/type = "value"
@@ -415,7 +415,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=9]
 length = 0.25
 loop = true
 step = 0.125
@@ -444,7 +444,7 @@ tracks/1/keys = {
 "values": [ 0, 1 ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=10]
 length = 0.166667
 loop = true
 step = 0.0416667
@@ -473,7 +473,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=11]
 length = 0.5
 loop = true
 step = 0.25
@@ -502,7 +502,7 @@ tracks/1/keys = {
 "values": [ 0, 1 ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=12]
 length = 0.166667
 loop = true
 step = 0.0833333
@@ -531,7 +531,7 @@ tracks/1/keys = {
 "values": [ 0, 1 ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=13]
 length = 0.333333
 loop = true
 step = 0.0833333
@@ -560,7 +560,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=14]
 length = 0.333333
 step = 0.0416667
 tracks/0/type = "value"
@@ -588,7 +588,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=15]
 length = 0.416667
 step = 0.0416667
 tracks/0/type = "value"
@@ -616,7 +616,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=16]
 length = 0.166667
 loop = true
 step = 0.0833333
@@ -645,7 +645,7 @@ tracks/1/keys = {
 "values": [ 0, 1 ]
 }
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="BoxShape" id=17]
 
 [node name="Azumi" type="Spatial"]
 script = ExtResource( 4 )
@@ -653,24 +653,23 @@ verticalSpeed = 1.0
 gravity = 5.5
 
 [node name="StateMachine" type="AnimationPlayer" parent="."]
-anims/AirAttack = SubResource( 2 )
-anims/Attack1 = SubResource( 3 )
-anims/Attack2 = SubResource( 4 )
-anims/Attack3 = SubResource( 5 )
-anims/Dash = SubResource( 6 )
-anims/Fall = SubResource( 7 )
-anims/Idle = SubResource( 8 )
-anims/Jump = SubResource( 9 )
-anims/Kick = SubResource( 10 )
-anims/Pinwheel = SubResource( 11 )
-anims/Push = SubResource( 12 )
-anims/Run = SubResource( 13 )
-anims/Run2 = SubResource( 14 )
-anims/Slam = SubResource( 15 )
-anims/Stinger = SubResource( 16 )
-anims/WallCling = SubResource( 17 )
+anims/AirAttack = SubResource( 1 )
+anims/Attack1 = SubResource( 2 )
+anims/Attack2 = SubResource( 3 )
+anims/Attack3 = SubResource( 4 )
+anims/Dash = SubResource( 5 )
+anims/Fall = SubResource( 6 )
+anims/Idle = SubResource( 7 )
+anims/Jump = SubResource( 8 )
+anims/Kick = SubResource( 9 )
+anims/Pinwheel = SubResource( 10 )
+anims/Push = SubResource( 11 )
+anims/Run = SubResource( 12 )
+anims/Run2 = SubResource( 13 )
+anims/Slam = SubResource( 14 )
+anims/Stinger = SubResource( 15 )
+anims/WallCling = SubResource( 16 )
 script = ExtResource( 6 )
-cancelFilter = [ 4 ]
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource( 9 )
@@ -697,16 +696,18 @@ script = ExtResource( 8 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.329363, 0 )
+cast_shadow = 0
 billboard = 1
 frames = ExtResource( 3 )
-animation = "Attack3"
+animation = "Idle"
+frame = 1
 
 [node name="Hurtbox" type="Area" parent="."]
 collision_mask = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="Hurtbox"]
 transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.3, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 17 )
 
 [node name="Hitbox" type="Area" parent="."]
 transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.35, 0.3, 0 )
@@ -714,6 +715,6 @@ collision_mask = 2
 script = ExtResource( 10 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Hitbox"]
-shape = SubResource( 1 )
+shape = SubResource( 17 )
 [connection signal="animation_finished" from="StateMachine" to="StateMachine" method="finished"]
 [connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_Hitbox_area_entered"]

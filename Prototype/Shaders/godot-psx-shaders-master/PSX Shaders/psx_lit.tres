@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://models/hair witch/Material_001.material" type="Material" id=1]
+[ext_resource path="res://Shaders/godot-psx-shaders-master/PSX Shaders/psx_lit.shader" type="Shader" id=2]
+
+[resource]
+next_pass = ExtResource( 1 )
+shader = ExtResource( 2 )
+shader_param/color = null
+shader_param/specular_intensity = null
+shader_param/resolution = 256.0
+shader_param/cull_distance = 5.0
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
