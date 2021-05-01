@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://RunState.gd" type="Script" id=1]
 [ext_resource path="res://JumpState.gd" type="Script" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://Attack3State.gd" type="Script" id=8]
 [ext_resource path="res://IdleState.gd" type="Script" id=9]
 [ext_resource path="res://AzumiHitbox.gd" type="Script" id=10]
+[ext_resource path="res://AzumiHurtbox.gd" type="Script" id=11]
+[ext_resource path="res://sprite assets/white.png" type="Texture" id=12]
+[ext_resource path="res://HpBar.gd" type="Script" id=13]
 
 [sub_resource type="Animation" id=1]
 resource_name = "AirAttack"
@@ -670,6 +673,7 @@ anims/Slam = SubResource( 14 )
 anims/Stinger = SubResource( 15 )
 anims/WallCling = SubResource( 16 )
 script = ExtResource( 6 )
+cancelFilter = [ 4 ]
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource( 9 )
@@ -699,11 +703,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.329363, 0 )
 cast_shadow = 0
 billboard = 1
 frames = ExtResource( 3 )
-animation = "Idle"
-frame = 1
+animation = "Attack1"
 
 [node name="Hurtbox" type="Area" parent="."]
+collision_layer = 1024
 collision_mask = 2
+script = ExtResource( 11 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Hurtbox"]
 transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.3, 0 )
@@ -711,10 +716,24 @@ shape = SubResource( 17 )
 
 [node name="Hitbox" type="Area" parent="."]
 transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.35, 0.3, 0 )
-collision_mask = 2
+collision_mask = 2048
 script = ExtResource( 10 )
+damage = 2
+hitstop = 0.083
 
 [node name="CollisionShape" type="CollisionShape" parent="Hitbox"]
 shape = SubResource( 17 )
+
+[node name="HpBar" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0.614746, 0 )
+modulate = Color( 1, 0, 0, 1 )
+texture = ExtResource( 12 )
+script = ExtResource( 13 )
+
+[node name="Base" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0.615, -0.01 )
+modulate = Color( 0.443137, 0, 0, 1 )
+texture = ExtResource( 12 )
 [connection signal="animation_finished" from="StateMachine" to="StateMachine" method="finished"]
+[connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_Hitbox_area_entered"]

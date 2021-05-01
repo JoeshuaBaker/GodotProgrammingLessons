@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://AzumiHitbox.gd"
 }, {
+"base": "Area",
+"class": "AzumiHurtbox",
+"language": "GDScript",
+"path": "res://AzumiHurtbox.gd"
+}, {
 "base": "Node",
 "class": "AzumiState",
 "language": "GDScript",
@@ -44,6 +49,31 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://EnemyHitbox.gd"
 }, {
+"base": "Area",
+"class": "EnemyHurtbox",
+"language": "GDScript",
+"path": "res://EnemyHurtbox.gd"
+}, {
+"base": "Node",
+"class": "EnemyState",
+"language": "GDScript",
+"path": "res://EnemyState.gd"
+}, {
+"base": "AnimationPlayer",
+"class": "EnemyStateMachine",
+"language": "GDScript",
+"path": "res://EnemyStateMachine.gd"
+}, {
+"base": "Object",
+"class": "HairWitchAnim",
+"language": "GDScript",
+"path": "res://EnemyScripts/HairWitch/HairWitchAnim.gd"
+}, {
+"base": "EnemyStateMachine",
+"class": "HairWitchStateMachine",
+"language": "GDScript",
+"path": "res://EnemyScripts/HairWitch/HairWitchStateMachine.gd"
+}, {
 "base": "Object",
 "class": "Utilities",
 "language": "GDScript",
@@ -53,10 +83,16 @@ _global_script_class_icons={
 "Azumi": "",
 "AzumiAnim": "",
 "AzumiHitbox": "",
+"AzumiHurtbox": "",
 "AzumiState": "",
 "AzumiStateMachine": "",
 "Enemy": "",
 "EnemyHitbox": "",
+"EnemyHurtbox": "",
+"EnemyState": "",
+"EnemyStateMachine": "",
+"HairWitchAnim": "",
+"HairWitchStateMachine": "",
 "Utilities": ""
 }
 
@@ -124,8 +160,10 @@ debug_zoom_down={
 
 [layer_names]
 
-3d_physics/layer_1="Azumi"
-3d_physics/layer_2="Enemy"
+3d_physics/layer_1="AzumiHitbox"
+3d_physics/layer_2="EnemyHitbox"
+3d_physics/layer_11="AzumiHurtbox"
+3d_physics/layer_12="EnemyHurtbox"
 
 [rendering]
 

@@ -20,6 +20,5 @@ func reset():
 
 
 func _on_Hitbox_area_entered(area):
-	print("Collision Triggered")
 	area.takeDamage(damage)
 	stateMachine.pause(hitstop)
