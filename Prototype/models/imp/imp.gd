@@ -7,6 +7,14 @@ export var heightRange : Vector2 = Vector2(10, 20)
 export var xBound : float = 5.5
 export var yBound : float = 4
 
+func hp_set(value : int):
+	hp = value
+	if hp <= 0:
+		stateMachine.transition(ImpAnim.Die)
+	
+func hp_get() -> int:
+	return hp
+
 func randomizePos():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
@@ -15,4 +23,7 @@ func randomizePos():
 	-yBound*rng.randf() + yBound*rng.randf())
 
 func getHit():
-	stateMachine.transition(ImpAnim.Stun)
+	if hp > 0:
+		stateMachine.transition(ImpAnim.Stun)
+	else:
+		stateMachine.transition(ImpAnim.Die)

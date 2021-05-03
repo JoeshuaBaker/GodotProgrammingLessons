@@ -3,8 +3,13 @@ extends EnemyState
 #inherited variables
 #var azumi : Azumi
 #var stateMachine : EnemyStateMachine
+onready var imp : Imp = $"../.."
 
 func enter(_lastState : EnemyState):
+	if imp.hp <= 0:
+		stateMachine.transition(ImpAnim.Die)
+		return
+	
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	if rng.randf() > 0.5:

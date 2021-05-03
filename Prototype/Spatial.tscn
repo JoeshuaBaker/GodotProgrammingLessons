@@ -45,7 +45,7 @@ transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0
 texture = ExtResource( 2 )
 script = ExtResource( 14 )
 
-[node name="Sprite3D" type="Sprite3D" parent="ViewportContainer/Viewport/JankyTitleScreen"]
+[node name="LabelSprite" type="Sprite3D" parent="ViewportContainer/Viewport/JankyTitleScreen"]
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 1, 3.75, 0.22, 0.1 )
 flip_v = true
 texture = SubResource( 1 )

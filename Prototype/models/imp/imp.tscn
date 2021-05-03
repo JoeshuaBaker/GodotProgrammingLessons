@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://models/imp/imp.material" type="Material" id=1]
 [ext_resource path="res://materials/impMat.tres" type="Material" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://EnemyScripts/imp/Imp_Charge.gd" type="Script" id=9]
 [ext_resource path="res://EnemyHitbox.tscn" type="PackedScene" id=10]
 [ext_resource path="res://EnemyHurtbox.tscn" type="PackedScene" id=11]
+[ext_resource path="res://EnemyScripts/imp/Imp_Die.gd" type="Script" id=12]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube"
@@ -1000,12 +1001,17 @@ script = ExtResource( 8 )
 [node name="Stun" type="Node" parent="AnimationPlayer"]
 script = ExtResource( 5 )
 
+[node name="Die" type="Node" parent="AnimationPlayer"]
+script = ExtResource( 12 )
+flySpeed = 8.0
+arcHeight = 4.0
+arcSpeed = 12.0
+
 [node name="Hurtbox" parent="." instance=ExtResource( 11 )]
 transform = Transform( 0.5, 0, 0, 0, 0.8, 0, 0, 0, 0.5, 0, 0.4, 0 )
 
 [node name="EnemyHitbox" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.5, 0, 0, 0, 0.8, 0, 0, 0, 0.75, 0, 0.4, -1.75 )
-damage = 10
 
 [node name="CollisionShape" parent="EnemyHitbox" index="0"]
 shape = SubResource( 8 )

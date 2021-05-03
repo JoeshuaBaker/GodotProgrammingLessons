@@ -7,13 +7,15 @@ const Search	: String = "Search"
 const Charge 	: String = "Charge"
 const Attack 	: String = "Attack"
 const Stun	 	: String = "Stun"
+const Die		: String = "Die"
 
 enum Type {
 	Idle,
 	Search,
 	Charge,
 	Attack,
-	Stun
+	Stun,
+	Die
 }
 
 static func strToEnum(var animName : String) -> int:
