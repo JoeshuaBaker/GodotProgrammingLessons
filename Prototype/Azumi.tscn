@@ -130,6 +130,18 @@ tracks/6/keys = {
 "update": 0,
 "values": [ Vector3( 0.35, 0.3, 0 ) ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("Hitbox:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.125 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.25, 0.2, 0.2 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 length = 0.208334
@@ -195,7 +207,7 @@ tracks/4/keys = {
 "values": [ 0.083 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Hitbox:translation")
+tracks/5/path = NodePath("Hitbox/CollisionShape:disabled")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -203,11 +215,11 @@ tracks/5/enabled = true
 tracks/5/keys = {
 "times": PoolRealArray( 0.0416667 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 0.35, 0.3, 0 ) ]
+"update": 1,
+"values": [ false ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Hitbox/CollisionShape:disabled")
+tracks/6/path = NodePath("Hitbox:translation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -215,8 +227,20 @@ tracks/6/enabled = true
 tracks/6/keys = {
 "times": PoolRealArray( 0.0416667 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
+"update": 0,
+"values": [ Vector3( 0.35, 0.3, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Hitbox:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.0416667 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.3, 0.2, 0.2 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -271,7 +295,7 @@ tracks/3/keys = {
 "values": [ 0.167 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Hitbox:translation")
+tracks/4/path = NodePath("Hitbox/CollisionShape:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -279,11 +303,11 @@ tracks/4/enabled = true
 tracks/4/keys = {
 "times": PoolRealArray( 0.125 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 0.35, 0.3, 0 ) ]
+"update": 1,
+"values": [ false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Hitbox/CollisionShape:disabled")
+tracks/5/path = NodePath("Hitbox:translation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -291,8 +315,20 @@ tracks/5/enabled = true
 tracks/5/keys = {
 "times": PoolRealArray( 0.125 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
+"update": 0,
+"values": [ Vector3( 0.35, 0.3, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Hitbox:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.125 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.3, 0.25, 0.25 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -703,7 +739,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.329363, 0 )
 cast_shadow = 0
 billboard = 1
 frames = ExtResource( 3 )
-animation = "Attack1"
+animation = "Attack3"
+frame = 3
 
 [node name="Hurtbox" type="Area" parent="."]
 collision_layer = 1024
@@ -715,11 +752,11 @@ transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.3, 0 )
 shape = SubResource( 17 )
 
 [node name="Hitbox" type="Area" parent="."]
-transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.35, 0.3, 0 )
+transform = Transform( 0.3, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.35, 0.3, 0 )
 collision_mask = 2048
 script = ExtResource( 10 )
-damage = 2
-hitstop = 0.083
+damage = 5
+hitstop = 0.167
 
 [node name="CollisionShape" type="CollisionShape" parent="Hitbox"]
 shape = SubResource( 17 )

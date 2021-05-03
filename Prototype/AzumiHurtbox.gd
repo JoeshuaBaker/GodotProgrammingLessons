@@ -18,4 +18,5 @@ func _ready():
 func _on_Hurtbox_area_entered(area):
 	if "damage" in area:
 		AzumiRoot.getHit(area.damage)
+		area.damage = 0
 	pass # Replace with function body.

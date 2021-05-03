@@ -19,6 +19,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://AzumiAnim.gd"
 }, {
+"base": "Camera",
+"class": "AzumiCamera",
+"language": "GDScript",
+"path": "res://AzumiCamera.gd"
+}, {
 "base": "Area",
 "class": "AzumiHitbox",
 "language": "GDScript",
@@ -74,6 +79,21 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://EnemyScripts/HairWitch/HairWitchStateMachine.gd"
 }, {
+"base": "Enemy",
+"class": "Imp",
+"language": "GDScript",
+"path": "res://models/imp/imp.gd"
+}, {
+"base": "Object",
+"class": "ImpAnim",
+"language": "GDScript",
+"path": "res://EnemyScripts/imp/ImpAnim.gd"
+}, {
+"base": "EnemyStateMachine",
+"class": "ImpStateMachine",
+"language": "GDScript",
+"path": "res://EnemyScripts/imp/ImpStateMachine.gd"
+}, {
 "base": "Object",
 "class": "Utilities",
 "language": "GDScript",
@@ -82,6 +102,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Azumi": "",
 "AzumiAnim": "",
+"AzumiCamera": "",
 "AzumiHitbox": "",
 "AzumiHurtbox": "",
 "AzumiState": "",
@@ -93,6 +114,9 @@ _global_script_class_icons={
 "EnemyStateMachine": "",
 "HairWitchAnim": "",
 "HairWitchStateMachine": "",
+"Imp": "",
+"ImpAnim": "",
+"ImpStateMachine": "",
 "Utilities": ""
 }
 
@@ -155,6 +179,11 @@ debug_zoom_up={
 debug_zoom_down={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":79,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 

@@ -11,7 +11,7 @@ const Recover	: String = "Recover"
 const Stun 		: String = "Stun"
 
 enum Type {
-	Search,
+	Idle,
 	Charge,
 	Flee,
 	Fire,

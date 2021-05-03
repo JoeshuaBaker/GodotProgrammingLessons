@@ -11,3 +11,6 @@ func hp_set(value : int):
 	
 func hp_get() -> int:
 	return hp
+	
+func getHit():
+	pass

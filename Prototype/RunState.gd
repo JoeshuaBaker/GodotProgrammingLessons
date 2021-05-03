@@ -5,6 +5,7 @@ extends AzumiState
 #var azumi : Azumi
 #var stateMachine : AzumiStateMachine
 var dir : Vector2
+onready var hitbox = $"../../Hitbox"
 
 func enter(_lastState : AzumiState):
 	stateMachine.play(AzumiAnim.Run)
@@ -17,12 +18,22 @@ func update(delta):
 	else:
 		if dir.x == -1:
 			azumi.animSprite.flip_h = true
-		elif dir.x == 1:
-			azumi.animSprite.flip_h = false
-			
-		azumi.translate(Vector3(dir.x*azumi.horizontalSpeed*delta, 
+			azumi.scale.x = abs(azumi.scale.x)*-1
+			azumi.translate(Vector3(-1*dir.x*azumi.horizontalSpeed*delta, 
 								0, 
 								dir.y*azumi.verticalSpeed*delta))
+		elif dir.x == 1:
+			azumi.animSprite.flip_h = false
+			azumi.scale.x = abs(azumi.scale.x)
+			azumi.translate(Vector3(dir.x*azumi.horizontalSpeed*delta, 
+								0, 
+								dir.y*azumi.verticalSpeed*delta))
+		else:
+			azumi.translate(Vector3(dir.x*azumi.horizontalSpeed*delta, 
+								0, 
+								dir.y*azumi.verticalSpeed*delta))
+		
+		
 
 #if cancel is true, this state was cancelled early
 func exit(_nextState : AzumiState, var _cancel : bool = false):

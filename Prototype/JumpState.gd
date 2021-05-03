@@ -10,6 +10,7 @@ var retainMovement : Vector2
 func enter(lastState : AzumiState):
 	stateMachine.play(AzumiAnim.Jump)
 	azumi.onGround = false
+	azumi.scale.x = abs(azumi.scale.x)
 	velocity = azumi.jumpSpeed
 	if lastState.name == AzumiAnim.Run:
 		retainMovement.x = lastState.dir.x*azumi.horizontalSpeed

@@ -18,7 +18,6 @@ func reset():
 	collisionShape.disabled = true
 	translation = Vector3.ZERO
 
-
 func _on_Hitbox_area_entered(area):
 	area.takeDamage(damage)
 	stateMachine.pause(hitstop)

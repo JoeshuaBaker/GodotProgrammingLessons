@@ -1,5 +1,7 @@
 extends Camera
 
+class_name AzumiCamera
+
 export var trauma : float = 0.0
 export var traumaDecay : float = 0.01
 export var decaySmoothness : int = 2

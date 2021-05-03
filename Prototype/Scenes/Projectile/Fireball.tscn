@@ -1,11 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://fireball.tres" type="SpriteFrames" id=1]
-[ext_resource path="res://EnemyHitbox.gd" type="Script" id=2]
+[ext_resource path="res://EnemyHitbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Projectile.gd" type="Script" id=3]
-
-[sub_resource type="SphereShape" id=1]
-radius = 0.355867
 
 [node name="Fireball" type="Spatial"]
 script = ExtResource( 3 )
@@ -16,15 +13,9 @@ speed = 0.25
 transform = Transform( -3.25841e-07, 2, 0, -2, -3.25841e-07, 0, 0, 0, 2, 0.6, 0, 0 )
 frames = ExtResource( 1 )
 animation = "burn"
+frame = 3
 playing = true
 
-[node name="EnemyHitbox" type="Area" parent="."]
+[node name="EnemyHitbox" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0 )
-collision_layer = 2
-collision_mask = 1024
-script = ExtResource( 2 )
-damage = 20
-
-[node name="CollisionShape" type="CollisionShape" parent="EnemyHitbox"]
-shape = SubResource( 1 )
-[connection signal="area_entered" from="EnemyHitbox" to="EnemyHitbox" method="_on_EnemyHitbox_area_entered"]
+destroyOnHit = true
